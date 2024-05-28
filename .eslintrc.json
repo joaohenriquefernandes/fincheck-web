@@ -16,6 +16,7 @@
     }
   },
   "rules": {
+    "import/no-extraneous-dependencies": "off",
     "react/button-has-type": "off",
     "react/require-default-props": "off",
     "import/prefer-default-export": "off",
