@@ -1,5 +1,7 @@
+import { cn } from '../../../../../app/utils/cn';
 import { formatCurrency } from '../../../../../app/utils/formatCurrency';
 import { BankAccountTypeIcon } from '../../../../components/icons/BankAccountTypeIcon';
+import { useDashboard } from '../../DashboardContext/useDashboard';
 
 interface IAccountCardProps {
   color: string;
@@ -9,6 +11,8 @@ interface IAccountCardProps {
 }
 
 export function AccountCard({ balance, color, name, type }: IAccountCardProps) {
+  const { areValuesVisible } = useDashboard();
+
   return (
     <div
       className="h-[200px] p-4 bg-white rounded-2xl flex flex-col justify-between border-b-4 border-teal-950"
@@ -23,7 +27,12 @@ export function AccountCard({ balance, color, name, type }: IAccountCardProps) {
       </div>
 
       <div>
-        <span className="text-gray-800 tracking-[-0.5px] font-medium block">
+        <span
+          className={cn(
+            'text-gray-800 tracking-[-0.5px] font-medium block',
+            !areValuesVisible && 'blur-sm',
+          )}
+        >
           {formatCurrency(balance)}
         </span>
 
