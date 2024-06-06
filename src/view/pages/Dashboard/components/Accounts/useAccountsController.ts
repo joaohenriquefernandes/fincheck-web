@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { useWindowWidth } from '../../../../../app/hooks/useWindowWidth';
-import { useDashboard } from '../../DashboardContext/useDashboard';
+import { useDashboard } from '../DashboardContext/useDashboard';
 
 export function useAccountsControler() {
   const windowWidth = useWindowWidth();

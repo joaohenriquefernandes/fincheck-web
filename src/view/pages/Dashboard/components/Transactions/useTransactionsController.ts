@@ -1,4 +1,4 @@
-import { useDashboard } from '../../DashboardContext/useDashboard';
+import { useDashboard } from '../DashboardContext/useDashboard';
 
 export function useTransactionsController() {
   const { areValuesVisible } = useDashboard();

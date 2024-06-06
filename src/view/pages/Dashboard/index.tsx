@@ -2,8 +2,9 @@ import { Logo } from '../../components/Logo';
 import { UserMenu } from '../../components/UserMenu';
 
 import { Accounts } from './components/Accounts';
+import { DashboardProvider } from './components/DashboardContext';
+import { Fab } from './components/Fab';
 import { Transactions } from './components/Transactions';
-import { DashboardProvider } from './DashboardContext';
 
 export function Dashboard() {
   return (
@@ -22,6 +23,8 @@ export function Dashboard() {
             <Transactions />
           </div>
         </main>
+
+        <Fab />
       </div>
     </DashboardProvider>
   );
